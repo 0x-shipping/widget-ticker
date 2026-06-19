@@ -10,16 +10,25 @@
     background: transparent;
     overflow: hidden;
   }
+
+  /* Wrapper untuk memperbesar tampilan widget 1.5x */
+  .ticker-wrapper {
+    zoom: 1.5;
+    -moz-transform: scale(1.5);
+    -moz-transform-origin: 0 0;
+  }
 </style>
 </head>
 <body>
-  <script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
-  <gecko-coin-price-marquee-widget
-    locale="en"
-    dark-mode="true"
-    outlined="true"
-    coin-ids="monad,emonad,chog,molandak-2,143-token"
-    initial-currency="usd">
-  </gecko-coin-price-marquee-widget>
+  <div class="ticker-wrapper">
+    <script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
+    <gecko-coin-price-marquee-widget
+      locale="en"
+      dark-mode="true"
+      outlined="true"
+      coin-ids="monad,emonad,chog,molandak-2,143-token"
+      initial-currency="usd">
+    </gecko-coin-price-marquee-widget>
+  </div>
 </body>
 </html>
